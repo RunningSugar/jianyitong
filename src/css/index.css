@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/*
+* @Author: zhangshuilian
+* @Date:   2017-02-14 22:21:47
+* @Last Modified time: 2017-02-15 10:25:44
+*/
+/*重置css-清除默认样式*/
+html, body, div, span, applet, object, iframe, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a img {
+  border: none;
+  outline: none; }
+
+a, a:link, a:visited {
+  text-decoration: none; }
+
+/*整站字体*/
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family: "微软雅黑";
+  font-size: 0.35rem;
+  font-weight: normal;
+  color: #333;
+  margin: auto; }
+
+/*对齐*/
+.floatL {
+  float: left; }
+
+.floatR {
+  float: right; }
+
+/* 清除浮动层 */
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+.clear {
+  clear: both; }
+
+/*
+#list1 li:nth-of-type(odd){ background:#00ccff;}奇数行 
+#list1 li:nth-of-type(even){ background:#ffcc00;}偶数行 
+#list2 li:nth-child(4n+1){ background:#00ccff;}从第一行开始算起 每隔4个（包含第四个）使用此样式 
+#list00000 li:nth-child(4n+2){background:#090;}从第二行开始算起 每隔4个（包含第四个）使用次样式 
+#list00000 li:nth-child(4n+3){background:#009;}从第三行开始算起 每隔4个（包含第四个）使用次样式 
+#list00000 li:nth-child(4n+4){background:#990;}从第四行开始算起 每隔4个（包含第四个）使用次样式 
+*/
+/*
+* @Author: zhangshuilian
+* @Date:   2017-02-15 10:21:47
+* @Last Modified time: 2017-02-17 12:25:05
+*/
+header {
+  width: 16.0rem;
+  height: 2.3rem;
+  background: #262626;
+  border-bottom: 0.1rem solid #4bccae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header .menu {
+    width: 1.5rem;
+    height: 1.2rem;
+    background: url(../img/menu-bg.png) no-repeat;
+    background-size: 1.5rem 1.2rem;
+    text-indent: -249.975rem;
+    margin-left: 0.4rem; }
+  header h1 {
+    font-size: 1.0rem;
+    color: #fff; }
+  header .pc {
+    width: 1.5rem;
+    height: 1.2rem;
+    background: url(../img/pc-bg.png) no-repeat;
+    background-size: 1.5rem 1.2rem;
+    text-indent: -249.975rem;
+    margin-right: 0.4rem; }
+  header a {
+    color: #fff; }
+
+section .user {
+  width: 16.0rem;
+  height: 2.125rem;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  section .user .login {
+    background: url(../img/login_1.png) no-repeat;
+    background-size: 1.45rem 1.5rem;
+    padding-left: 2.0rem;
+    border-right: 2px solid #e0e0e0; }
+  section .user .register {
+    background: url(../img/login_2.png) no-repeat;
+    background-size: 1.45rem 1.5rem;
+    padding-left: 2.0rem; }
+  section .user a {
+    color: #909090;
+    font-size: 0.65rem;
+    line-height: 1.45rem;
+    width: 8rem;
+    display: block;
+    margin-left: 1.4rem; }
+
+section .pic {
+  width: 16.0rem;
+  height: 7.825rem;
+  position: relative;
+  top: 0; }
+  section .pic img {
+    width: 16.0rem;
+    height: 7.825rem; }
+  section .pic .opa {
+    width: 100%;
+    height: 1.85rem;
+    position: absolute;
+    bottom: 0;
+    background: #000;
+    opacity: 0.4; }
+  section .pic .font {
+    width: 100%;
+    display: block;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.85rem;
+    color: #fff;
+    position: absolute;
+    bottom: 0; }
+
+section .news {
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.1rem solid #4bccae; }
+  section .news ul {
+    width: 15.25rem; }
+  section .news li {
+    padding-left: 10px;
+    height: 2.0rem;
+    line-height: 2.0rem;
+    border-bottom: 1px solid #eaeaea; }
+    section .news li a {
+      color: #333333;
+      font-size: 0.75rem; }
+  section .news li:last-child {
+    border-bottom: none; }
+
+.core .hot {
+  width: 16rem; }
+  .core .hot ul {
+    width: 100%;
+    height: 2.05rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea; }
+    .core .hot ul li {
+      height: 2.05rem;
+      width: 3.125rem;
+      font-size: 0.75rem;
+      text-align: center; }
+      .core .hot ul li a {
+        color: #363636;
+        line-height: 2.0rem; }
+    .core .hot ul li:hover {
+      border-bottom: 4px solid #dc3d5b;
+      box-sizing: border-box; }
+  .core .hot h2 {
+    height: 2.0rem;
+    width: 16rem;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 0.75rem;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .core .hot h2 span {
+      width: 1.4rem;
+      height: 1.4rem;
+      display: inline-block;
+      background: url(../img/hot.png) no-repeat right center;
+      background-size: 1.4rem 1.4rem;
+      margin-right: 0.75rem; }
+    .core .hot h2 a {
+      color: #000;
+      line-height: 2.0rem; }
+
+.core .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-left: 0.75rem;
+  height: 6.55rem; }
+  .core .content .title {
+    font-size: 0.75rem;
+    color: #2a2a2a;
+    width: 16rem;
+    line-height: 2rem; }
+  .core .content img {
+    width: 5.2rem;
+    height: 3.7rem; }
+  .core .content p {
+    width: 8.35rem;
+    height: 3.7rem;
+    font-size: 0.65rem;
+    color: #8b8e97;
+    line-height: 1.25rem; }
+
+.core .end {
+  width: 16rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #eaeaea; }
+  .core .end ul {
+    width: 15.25rem; }
+  .core .end li {
+    width: 15.25rem;
+    height: 2.0rem;
+    line-height: 2.0rem;
+    border-top: 1px solid #eaeaea;
+    padding-left: 0.3rem;
+    box-sizing: border-box; }
+    .core .end li a {
+      color: #333333;
+      font-size: 0.75rem; }
+  .core .end li:last-child {
+    border-bottom: none; }
+
+.scroll {
+  width: 16rem;
+  height: 3.0rem;
+  display: flex;
+  background: #fafafa;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.1rem solid #4bccae; }
+  .scroll span {
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url(../img/scroll.png) no-repeat;
+    background-size: 1.4rem 1.4rem; }
+  .scroll a {
+    font-size: 0.75rem;
+    color: #84888b;
+    padding-left: 0.5rem; }
+
+footer {
+  height: 3.7rem;
+  background: #262626;
+  width: 16.0rem;
+  display: flex;
+  align-items: center; }
+  footer .pcEnd {
+    width: 1.45rem;
+    height: 1.15rem;
+    background: url(../img/footer_1.png) no-repeat 2rem center;
+    background-size: 1.45rem 1.15rem; }
+  footer .MobileApp {
+    width: 0.65rem;
+    height: 1.15rem;
+    background: url(../img/footer_2.png) no-repeat 1.75rem center;
+    background-size: 0.65rem 1.15rem;
+    border-left: 2px solid #686868; }
+  footer a {
+    flex: 1;
+    color: #909090;
+    font-size: 0.75rem; }
+    footer a .pl1 {
+      padding-left: 4.1rem;
+      box-sizing: border-box; }
+    footer a .pl2 {
+      padding-left: 3.05rem;
+      box-sizing: border-box; }
